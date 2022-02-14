@@ -11,7 +11,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  gap: 20px;
+  gap: 15px;
   margin-left: 1rem;
 }
 nav {
@@ -36,8 +36,8 @@ nav a {
   width: 163px;
 }
 .spacerNav {
-  flex-basis: 2rem;
-  flex-grow: 5;
+  /* flex-basis: 1rem; */
+  flex-grow: 1;
 }
 nav input {
   margin: 0 1rem 4px 0rem;
@@ -220,6 +220,12 @@ table tr:first-child {
   }
   .tableWrap {
     flex-wrap: wrap-reverse;
+  }
+  table {
+    margin-left: 0;
+  }
+  .imgMain {
+    margin-left: 0;
   }
 }
 @media (max-width: 1080px) {

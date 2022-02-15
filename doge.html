@@ -11,7 +11,7 @@
   <body>
     <header class="navWrapper">
       <div class="hamburger">
-        <a id="hamburger">
+        <a id="hamburger" onclick="showAside()">
           <div></div>
           <div></div>
           <div></div>
@@ -21,7 +21,6 @@
         <span class="spacerLogo"></span>
         <a href="">Artikel</a>
         <a href="">Disukussion</a>
-        <a href="">Blank</a>
         <a href="">Lesen</a>
         <a href="">Bearbeiten</a>
         <a href="">Quelltext bearbeiten</a>
@@ -35,7 +34,7 @@
     </header>
     <main>
       <div class="flexAside">
-        <aside id="aside">
+        <aside id="aside" class="aside">
           <figure>
             <a
               href="https://gagadget.com/media/cache/60/76/60767a5793e52c568f83bf6f602db43a.jpg"
@@ -49,7 +48,7 @@
           </figure>
 
           <a href="">Hauptseite</a>
-          <a href="">Themenportale</a>
+          <a class="wordBreak" href="">Themen<wbr />portale</a>
           <a href="">Zufälliger Artikel</a>
           <div class="pBreak">
             <p>Mitmachen</p>
@@ -326,9 +325,7 @@
         </div>
       </div>
     </main>
-    <footer>
-      
-    </footer>
+    <footer></footer>
     <script src="./javascript.js"></script>
   </body>
 </html>

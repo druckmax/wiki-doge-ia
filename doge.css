@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
 
 :root {
-  --primary: #553d1c;
+  /* --primary: #553d1c;
   --com: #1a4f99;
   --ana-1: #99251a;
   --ana-2: #8e991a;
   --tri-1: #4f991a;
-  --tri-2: #1a9964;
+  --tri-2: #1a9964; */
   --link: #002bb9;
-  --visited: #8a3b8d;
+  --visited: #870e8b;
   --hover: #c90000;
   --select: #047a0a;
 }

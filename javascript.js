@@ -19,11 +19,8 @@
 
 let toggle = document.getElementById("aside");
 
-let noShow = true;
-
 // Naming the function "showAside" and toggling the aside menu by adding and removing the ".show" class defined in the CSS to the aside element in the HTML
 
 function showAside() {
-    noShow =! noShow;
-    toggle.classList.toggle("show", noShow);
+    toggle.classList.toggle("show");
 }

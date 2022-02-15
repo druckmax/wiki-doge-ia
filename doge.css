@@ -1,18 +1,37 @@
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
 
+:root {
+  --primary: #553d1c;
+  --com: #1a4f99;
+  --ana-1: #99251a;
+  --ana-2: #8e991a;
+  --tri-1: #4f991a;
+  --tri-2: #1a9964;
+  --link: #002bb9;
+  --visited: #8a3b8d;
+  --hover: #c90000;
+  --select: #047a0a;
+}
+
 * {
   font-family: Arial, Helvetica, sans-serif;
   padding: 0;
   margin: 0;
   line-height: 1.5;
+  box-sizing: border-box;
+}
+body {
+  background: url(./img/concrete-wall.png);
 }
 .navWrapper {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  gap: 15px;
+  gap: 4rem;
+  column-gap: 2rem;
   margin-left: 1rem;
+  /* background-color: #fdfdfd; */
 }
 nav {
   width: 100%;
@@ -21,19 +40,19 @@ nav {
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  background-color: #fdfdfd;
+  /* background-color: #fdfdfd; */
   gap: 0 1rem;
+  margin-top: 1rem;
 }
 nav a {
   font-size: 14px;
   /* padding: 0 0.5rem; */
   margin-bottom: 4px;
-  padding: 4px;
+  padding: 2px;
   text-align: center;
 }
-
 .spacerLogo {
-  width: 163px;
+  width: 168px;
 }
 .spacerNav {
   /* flex-basis: 1rem; */
@@ -41,11 +60,11 @@ nav a {
 }
 nav input {
   margin: 0 1rem 4px 0rem;
-  padding: 0 0.75rem 0 0.25rem;
-
+  padding: 2px 20px 2px 10px;
 }
 .searchBar {
   position: relative;
+  margin-top: 4px;
 }
 .btnSubmit {
   background: no-repeat center / 1.23076923em url(./img/magnifying_glass.png);
@@ -83,6 +102,20 @@ h3 {
 a {
   text-decoration: none;
 }
+/* The order of the foloowing pseudo-selectos is important */
+a:link {
+  color: var(--link);
+}
+a:visited {
+  color: var(--visited);
+}
+a:hover {
+  color: var(--hover);
+}
+a:active {
+  color: var(--select);
+}
+
 .flexAside {
   display: flex;
   flex: row;
@@ -90,7 +123,7 @@ a {
 aside {
   padding: 0rem 2rem 0 1rem;
   transform: translateY(-2rem);
-  background-color: #fdfdfd;
+  /* background-color: #fdfdfd; */
 }
 aside figure {
   text-align: center;
@@ -103,10 +136,18 @@ aside figure figcaption {
   margin-bottom: 2rem;
 }
 #logoMain {
+  filter: drop-shadow(15px 5px 10px #553d1c94);
   transition: transform 0.8s ease-in-out;
 }
 #logoMain:hover {
   transform: scale(1.25) rotate(-30deg);
+}
+#logoMain:active {
+  transition: transform 0.1s linear;
+  transform: scale(1.1);
+}
+aside figure {
+  text-shadow: 4px 4px 4px rgba(17, 17, 17, 0.219);
 }
 aside a {
   display: block;
@@ -121,6 +162,7 @@ aside a {
   border-left: 1px solid #553d1c;
   border-top: 1px solid #553d1c;
   background-color: #f6f6f6;
+  /* opacity: 0.9; */
 }
 .flex {
   display: flex;
@@ -136,19 +178,28 @@ aside a {
   border: 1px solid #999;
   box-shadow: 5px 5px 10px rgba(143, 143, 143, 0.3);
 }
-
+.hamburger {
+  margin: 10px 0;
+}
 .hamburger a {
   display: flex;
   flex-direction: column;
   border: 1px solid #553d1c;
-  background-color: #99641a3f;
-  padding: 5px 5px;
+  background-color: #99641a86;
+  padding: 10px 10px;
+  transition: 0.3s ease-out;
+}
+.hamburger a:hover {
+  background-color: var(--ana-2);
+}
+.hamburger a:active {
+  transform: scale(0.9);
 }
 
 .hamburger div {
   width: 30px;
   height: 5px;
-  background-color: black;
+  background-color: #222;
   margin: 2px 0;
   border-radius: 10px;
 }
@@ -161,7 +212,7 @@ section:last-child {
 }
 .toc {
   background-color: #fdfdfd;
-  width: 12rem;
+  width: 250px;
   padding: 0rem 0.7rem 0.7rem 1.75rem;
   margin-top: 1rem;
   border: 1px solid #111;
@@ -211,6 +262,9 @@ table tr:nth-child(odd) {
 table tr:first-child {
   background-color: #d1d1d1;
 }
+#einzelnachweise ol {
+  margin-left: 3rem;
+}
 @media (max-width: 850px) {
   .flex {
     flex-wrap: wrap-reverse;
@@ -223,6 +277,7 @@ table tr:first-child {
   }
   table {
     margin-left: 0;
+    margin-bottom: 2rem;
   }
   .imgMain {
     margin-left: 0;
@@ -231,19 +286,29 @@ table tr:first-child {
 @media (max-width: 1080px) {
   aside {
     display: none;
+    transform: translateY(1rem);
   }
   .spacerLogo {
     display: none;
   }
-  /* nav {
-    height: 3rem;
-  } */
+  .spacerNav {
+    display: none;
+  }
+  #aside figure {
+    display: none;
+  }
   nav a {
     font-size: 13px;
+    text-decoration: underline;
+    padding-right: 10px;
     /* white-space: nowrap; */
   }
+  .navWrapper {
+    align-items: center;
+    margin: 1rem;
+  }
 }
-@media (min-width: 1080px) {
+@media (min-width: 1081px) {
   .hamburger {
     display: none;
   }

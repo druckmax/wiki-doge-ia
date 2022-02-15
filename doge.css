@@ -4,9 +4,10 @@
   /* --primary: #553d1c;
   --com: #1a4f99;
   --ana-1: #99251a;
-  --ana-2: #8e991a;
-  --tri-1: #4f991a;
+    --tri-1: #4f991a;
   --tri-2: #1a9964; */
+
+  --ana-2: #8e991a;
   --link: #002bb9;
   --visited: #870e8b;
   --hover: #c90000;
@@ -194,7 +195,7 @@ aside a {
   border: 1px solid #553d1c;
   background-color: #99641a86;
   padding: 10px 10px;
-  transition: 0.3s ease-out;
+  transition: 0.2s ease-out;
 }
 .hamburger a:hover {
   background-color: var(--ana-2);
